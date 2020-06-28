@@ -33,7 +33,7 @@
                 <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
                 </section>
                 <nav class="site-footer-nav">
-                    <a href="{{@site.url}}">Latest Posts</a>
+                    <a href="{{@site.url}}">{{t "Latest Posts"}}</a>
                     {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank"
                         rel="noopener">Facebook</a>{{/if}}
                     {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank"
@@ -48,7 +48,7 @@
     {{#if @labs.members}}
     <div class="subscribe-success-message">
         <a class="subscribe-close" href="javascript:;"></a>
-        You've successfully subscribed to {{@site.title}}!
+        {{t "You've successfully subscribed to"}} {{@site.title}}!
     </div>
 
     <div id="subscribe" class="subscribe-overlay">
@@ -72,10 +72,11 @@
                         </button>
                     </div>
                     <div class="message-success">
-                        <strong>Great!</strong> Check your inbox and click the link to confirm your subscription.
+                        <strong>{{ t"Great!"}}</strong>
+                        {{t "Check your inbox and click the link to confirm your subscription."}}
                     </div>
                     <div class="message-error">
-                        Please enter a valid email address!
+                        {{t "Please enter a valid email address!"}}
                     </div>
                 </form>
             </div>
